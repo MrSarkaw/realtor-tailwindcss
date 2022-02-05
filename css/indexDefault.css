@@ -1,0 +1,152 @@
+body{
+    font-family: "speda";
+}
+
+*::-webkit-scrollbar{
+    width: 10px;
+    height: 5px;
+ 
+
+}
+*::-webkit-scrollbar-thumb{
+    background-color: #276678;
+    border-radius: 20px;
+    border:1px solid white;
+
+}
+.grayColor{
+    background: #f8f8f8;
+}
+.bigImage{
+    height: 500px;
+    position: relative;
+    background: black;
+    
+}
+
+.bigImage::before{
+    content: '';
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url('../images/bigImage.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: cover;
+    opacity:0.3;
+}
+.bgLogin{
+    background-image: url('../images/login.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: cover;
+    background-size: cover;
+    height: 400px;
+}
+.divAbout{
+    background-image: url('../images/2440.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: cover;
+    background-size: cover;
+}
+.hCustom{
+    font-size: 40px;
+    position: relative;
+    line-height: 1.3;
+    text-align: center;
+}
+
+
+@media only screen and (max-width:650px){
+    .hCustom{
+        font-size: 20px;
+    }
+    
+}
+
+
+
+.modal {
+    transition: opacity 0.25s ease;
+  }
+  body.modal-active {
+    overflow-x: hidden;
+    overflow-y: visible !important;
+  }
+
+
+
+  [x-cloak] {
+    display: none;
+  }
+  
+  .svg-icon {
+    width: 1em;
+    height: 1em;
+  }
+  
+  .svg-icon path,
+  .svg-icon polygon,
+  .svg-icon rect {
+    fill: #333;
+  }
+  
+  .svg-icon circle {
+    stroke: #4691f6;
+    stroke-width: 1;
+  }
+  
+
+
+
+  .cH50{
+    height: 50%;;
+  }
+  .cH{
+      height:75%
+  }
+
+  .imgDiv{
+      height: 200px;
+      width: 100%;
+  }
+
+  @media only screen and (max-width:768px){
+      .imgDiv{
+          height: auto;
+      }
+  }
+
+  .yellow{
+    color: rgb(37, 37, 37) !important;
+    background: rgb(223, 223, 34) !important;
+  }
+  .black{
+      color: rgb(223, 223, 34) !important;
+      background: rgb(37, 37, 37) !important;
+
+  }
+
+  .bg-purple-500{
+      background: #276678 !important;
+  }
+  .bg-purple-600{
+      background: #276678 !important;
+  }
+
+  .text-purple-600{
+      color: #276678 !important;
+  }
+  .text-purple-500{
+      color: #276678 !important;
+  }
+
+  .text-purple-400{
+      color: #276678 !important;
+  }
+
+ 

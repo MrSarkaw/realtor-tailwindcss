@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KURDREALTOR</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/indexDefault.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</head>
+<body dir="rtl" class="grayColor">
+
+  <!-- header -->
+     <div class="full bg-purple-500 p-1 pt-3 ">
+        <div class="w-10/12 mx-auto flex flex-wrap mx-auto justify-center items-center text-center">
+        
+            <div class="w-full sm:w-1/3 text-center lg:text-right text-xl ">
+              <span class="bg-white px-2 rounded pt-2 mx-auto">
+                <a href="index.html">
+                  <span class="text-purple-600">KURD</span>
+                  <span class="font-hairline">REALTOR</span>
+               </a>
+              </span>
+            </div>
+            <div class="w-full mx-auto sm:w-2/3 justify-center  sm:justify-start flex" dir="ltr" style="text-align: left;">
+              <a href="register.html" class="mx-4 transform transition duration-300 text-white border-w-2  text-left border-b border-solid hover:-translate-y-2">
+                دانانی هەژمار <i class="fas fa-user-plus text-xs "></i> 
+            </a>
+            <a href="login.html" class="mx-4 transform transition duration-300 text-white border-w-2 text-left  border-b border-solid hover:-translate-y-2">
+              چوونە ژورەوە <i class="fas fa-sign-in-alt text-xs"></i>
+              </a>
+          
+              <!-- dway login bwn wata drws bwne sessionaka -->
+            <!-- <a href="profile.html" class="mt-4 sm:mt-0">
+                    <img src="https://www.pngarts.com/files/3/Avatar-PNG-Download-Image.png" class="w-12 rounded-full" alt="">
+                </a>
+                -->
+          </div>
+          
+        </div>
+    </div>
+    <div class="sm:w-full lg:w-11/12 md:px-6 lg:px-16 p-2 mx-auto border-t-2 border-solid pb-10 pt-4 ">
+        <button class="border-b-2 text-purple-600 transform transition hover:scale-90 duration-150 focus:outline-none
+         border-purple-600 rounded px-2 text-white" onclick="window.history.back()">
+            <i class="fas fa-arrow-right"></i>
+            گەڕاندنەوە
+        </button>
+   
+        <div class="flex flex-wrap justify-center items-center mt-2 p-2 bg-purple-500 md:rounded-xl ">
+          <div class="w-full text-center flex justify-between md:inline">
+              <button class="bg-blue-500 py-2 rounded-lg px-4 border border-white text-white text-sm  focus:outline-none"><i class="fas fa-pen text-xs"></i> نوێكردنەوە</button>
+              <button class="bg-red-500 py-2 rounded-lg px-4 border border-white text-white  text-sm  focus:outline-none"><i class="fas fa-trash text-xs"></i> سڕینەوە</button>
+              <button class="bg-orange-500 py-2 rounded-lg px-4  border border-white text-white  text-sm focus:outline-none"><i class="fas fa-coins text-xs"></i> فرۆشرا </button>
+          </div>
+            <div class=" w-full overflow-hidden rounded-xl ">
+                <div class="swiper-container w-full ">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper h-64 w-full">
+                            <!-- Slides -->
+                            <div class="swiper-slide  py-6 flex items-center justify-center">
+                                    <div class="py-6 ">
+                                        <div class="flex justify-center py-4 ">
+                                            <img class="rounded-lg modal-open"  class="w-full"
+                                             src="posts/68576171_2787425514604993_4241807682618523648_o-2.jpg">
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="swiper-slide  py-6 flex items-center justify-center">
+                                <div class="py-6 ">
+                                    <div class="flex justify-center py-4 ">
+                                        <img class="rounded-lg modal-open"  class="w-full"
+                                         src="posts/88214942_579613266238116_7722492455387398144_o.jpg">
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide py-6 flex items-center justify-center">
+                            <div class="py-6 ">
+                                <div class="flex justify-center py-4 ">
+                                    <img class="rounded-lg modal-open"  class="w-full"
+                                     src="posts/68576171_2787425514604993_4241807682618523648_o-2.jpg">
+                                </div>
+                            </div>
+                    </div>
+                    
+                        </div>
+                        <!-- If we need navigation buttons -->
+                        <div class="hidden md:block">
+                            <div class="swiper-button-prev  md:auto bg-white w-12 h-16 text-xs px-6 rounded-lg text-purple-500 mx-10"></div>
+                            <div class="swiper-button-next  md:auto bg-white w-12 h-16 text-xs  px-6  rounded-lg text-purple-500 mx-10"></div>
+                        </div>
+
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>   
+                    </div>
+            </div>
+          
+          
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 text-purple-500 lg:grid-cols-5 gap-4 gap-y-10 text-center pt-5 pb-16">
+          <div class="border-b border-purple-500 transform transition duration-150 hover:scale-90"><i class="fas fa-building"></i>
+            موڵك: شوقە
+          </div> 
+          <div class="border-b border-purple-500 transform transition duration-150 hover:scale-90"><i class="fas fa-home"></i>
+              جۆر: بۆكرێ 
+            </div>
+            <div class="border-b border-purple-500 transform transition duration-150 hover:scale-90"><i class="fas fa-shoe-prints"></i>
+              ڕووبەر: 200
+            </div>
+            <div class="border-b border-purple-500 transform transition duration-150 hover:scale-90"><i class="fas fa-sack"></i>
+              نرخ: 20000
+            </div>
+            <div class="border-b border-purple-500 transform transition duration-150 hover:scale-90"><i class="fas fa-bed"></i>
+              ژمارەی ژووری نوستن: 3
+            </div>
+            <div class="border-b border-purple-500 transform transition duration-150 hover:scale-90"><i class="fas fa-shower"></i>
+              ژمارەی گەرماو: 2
+            </div>
+           
+            <div class="border-b border-purple-500 transform transition duration-150 hover:scale-90"><i class="fas fa-id-badge"></i>
+              <a href="profileOwner.html">
+                 خاوەن: تێست
+              </a> 
+            </div>
+            <div class="border-b border-purple-500 transform transition duration-150 hover:scale-90"><i class="fas fa-city"></i>
+              شار: سلێمانی
+            </div>
+            <div class="border-b border-purple-500 transform transition duration-150 hover:scale-90"><i class="fas fa-garage"></i>
+              گەراج: 2
+            </div>
+            <div class="border-b border-purple-500 transform transition duration-150 hover:scale-90"><i class="fas fa-mobile"></i>
+              ژ.مۆبایل: 0700 000 0000
+            </div>
+           
+        </div>
+
+        <!-- location -->
+
+        <div class="bg-purple-500 p-2 rounded-lg ">
+          <div class="w-full text-center mt-12">
+            <div class="w-full shadow rounded-xl overflow-hidden">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1303.8643453893715!2d45.4106333425952!3d35.545371557121754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40002f3c727c4cbf%3A0xe98b67573fe8db0!2sChwar%20chra%20Mosque!5e0!3m2!1sen!2siq!4v1603807362503!5m2!1sen!2siq" class="w-full" height="260" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <p class="mt-5 text-white">ناونيشان : تێست-تێست</p>
+            </div>
+        </div>
+
+        <!-- hawshewa -->
+        <hr class="mt-4 border-purple-500">
+        <p class="bg-purple-600 p-1 text-sm rounded-lg text-white mt-2 inline-block ">موڵكی هاوشێوە</p>
+        <div class="w-12/12  grid px-2 grid-cols-2 md:px-0 md:grid-cols-3 lg:grid-cols-4 gap-5 pt-5">
+
+          <a href="detail.html" class="transform mx-auto transition hover:scale-110 duration-150">
+            <div class="max-w-sm  overflow-hidden grayColor shadow-lg flex flex-wrap rounded-lg justify-center items-center ">
+                <div class="w-full">
+                  <img  src="posts/88214942_579613266238116_7722492455387398144_o.jpg" alt="" class="imgDiv">
+                  
+                </div>
+                  <div class="px-6 py-4 text-center relative">
+                    <p class=" text-base px-2 bg-purple-600 text-white rounded-lg -mt-6 border border-white ">
+                    شوقە بۆكرێ 
+                    </p>
+                  </div>
+                  <div class="w-full flex flex-wrap pb-4">
+                    <span class=" text-xs px-2 text-gray-700 w-1/3 text-center ">
+                      <i class="fas fa-home"></i> <br>
+                      سلێمانی
+                     </span>
+                    <span class=" text-xs px-2 text-gray-700 w-1/3 text-center ">
+                      <i class="fas fa-dollar-sign"></i> <br>
+                          12322
+                    </span>
+                    <span class=" text-xs px-2 text-gray-700 w-1/3 text-center ">
+                      <i class="fas fa-user"></i> <br>
+                        تێست
+                    </span>
+                </div>
+                </div>
+            </a>
+
+            <a href="detail.html" class="transform mx-auto transition hover:scale-110 duration-150">
+              <div class="max-w-sm  overflow-hidden grayColor shadow-lg flex flex-wrap rounded-lg justify-center items-center ">
+                  <div class="w-full">
+                    <img src="posts/68576171_2787425514604993_4241807682618523648_o-2.jpg" alt="" class="imgDiv">
+                    
+                  </div>
+                    <div class="px-6 py-4 text-center relative">
+                      <p class=" text-base px-2 bg-purple-600 text-white rounded-lg -mt-6 border border-white ">
+                      شوقە بۆكرێ 
+                      </p>
+                    </div>
+                    <div class="w-full flex flex-wrap pb-4">
+                      <span class=" text-xs px-2 text-gray-700 w-1/3 text-center ">
+                        <i class="fas fa-home"></i> <br>
+                        سلێمانی
+                       </span>
+                      <span class=" text-xs px-2 text-gray-700 w-1/3 text-center ">
+                        <i class="fas fa-dollar-sign"></i> <br>
+                            12322
+                      </span>
+                      <span class=" text-xs px-2 text-gray-700 w-1/3 text-center ">
+                        <i class="fas fa-user"></i> <br>
+                          تێست
+                      </span>
+                  </div>
+                  </div>
+              </a>
+             
+    
+              <a href="detail.html" class="transform mx-auto transition hover:scale-110 duration-150">
+                <div class="max-w-sm  overflow-hidden grayColor shadow-lg flex flex-wrap rounded-lg justify-center items-center ">
+                    <div class="w-full">
+                      <img src="posts/68576171_2787425514604993_4241807682618523648_o-2.jpg" alt="" class="imgDiv">
+                      
+                    </div>
+                      <div class="px-6 py-4 text-center relative">
+                        <p class=" text-base px-2 bg-purple-600 text-white rounded-lg -mt-6 border border-white ">
+                        شوقە بۆكرێ 
+                        </p>
+                      </div>
+                      <div class="w-full flex flex-wrap pb-4">
+                        <span class=" text-xs px-2 text-gray-700 w-1/3 text-center ">
+                          <i class="fas fa-home"></i> <br>
+                          سلێمانی
+                         </span>
+                        <span class=" text-xs px-2 text-gray-700 w-1/3 text-center ">
+                          <i class="fas fa-dollar-sign"></i> <br>
+                              12322
+                        </span>
+                        <span class=" text-xs px-2 text-gray-700 w-1/3 text-center ">
+                          <i class="fas fa-user"></i> <br>
+                            تێست
+                        </span>
+                    </div>
+                    </div>
+                </a>
+
+                
+    
+                <a href="" class="transform mx-auto transition hover:scale-110 duration-150">
+                    <div class="max-w-sm  overflow-hidden grayColor shadow-lg flex flex-wrap rounded-lg justify-center items-center ">
+                        <div class="w-full">
+                          <img src="posts/68576171_2787425514604993_4241807682618523648_o-2.jpg" alt="" class="imgDiv">
+                          
+                        </div>
+                          <div class="px-6 py-4 text-center relative">
+                            <p class=" text-base px-2 bg-purple-600 text-white rounded-lg -mt-6 border border-white ">
+                            شوقە بۆكرێ 
+                            </p>
+                          </div>
+                          <div class="w-full flex flex-wrap pb-4">
+                            <span class=" text-xs px-2 text-gray-700 w-1/3 text-center ">
+                              <i class="fas fa-home"></i> <br>
+                              سلێمانی
+                             </span>
+                            <span class=" text-xs px-2 text-gray-700 w-1/3 text-center ">
+                              <i class="fas fa-dollar-sign"></i> <br>
+                                  12322
+                            </span>
+                            <span class=" text-xs px-2 text-gray-700 w-1/3 text-center ">
+                              <i class="fas fa-user"></i> <br>
+                                تێست
+                            </span>
+                        </div>
+                        </div>
+                    </a>
+  
+                    
+        
+                  
+        </div>
+
+    </div>
+
+
+     <!--Modal-->
+  <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 z-50 flex items-center justify-center">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+    
+    <div class="modal-container bg-white w-full md:w-9/12 mx-auto rounded shadow-lg z-50 overflow-y-auto">
+    
+
+      <!-- Add margin if you want to see some of the overlay behind the modal-->
+      <div class="modal-content py-4 text-left px-6">
+        <!--Title-->
+        <div class="flex justify-between items-center pb-3">
+          <div class="modal-close cursor-pointer z-50">
+            <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+              <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+            </svg>
+          </div>
+        </div>
+
+        <!--Body-->
+        <img src="posts/88214942_579613266238116_7722492455387398144_o.jpg" class="mx-auto  bigImage"  alt="">
+        
+      </div>
+    </div>
+  </div>
+
+    <!-- footer -->
+    <div class="w-full p-2 pt-5 text-center bg-purple-500">
+
+      <span class="bg-white px-2 rounded pt-2">
+        <span class="text-purple-600">KURD</span>
+        <span class="font-hairline">REALTOR</span>
+      </span>
+
+      <div class="w-12/12 mx-auto text-white pt-2 mt-2 border-t border-white">
+          <p>
+            یه‌كه‌مین ماڵپه‌ڕی كوردی بۆ فرۆشتن و به‌كرێدانی موڵكه‌كانتان
+          </p>
+
+          <div class="bg-white bg-opacity-50  sm:w-4/12 rounded mx-auto  text-xl " style="font-size: 24px;">
+             <a href="" class="m-2 ">
+              <i class="fab fa-facebook text-blue-500"></i>
+            </a>
+            <a href="" class="m-2 ">
+              <i class="fab fa-viber text-purple-500"></i>
+            </a>
+            <a href="" class="m-2 ">
+              <i class="fas fa-envelope-square text-red-500"></i>
+            </a> 
+            <a href="" class="m-2 ">
+              <i class="fab fa-android text-green-500"></i>
+            </a>
+            <a href="" class="m-2 ">
+              <i class="fab fa-app-store-ios text-blue-500"></i>
+            </a>
+          </div>
+        
+      </div>
+
+      <div class="w-full grid gap-10 grid-cols-1 md:grid-cols-2 mt-4 pt-2 border-white border-t">
+          <div class="border border-white rounded-lg overflow-hidden pb-1">
+            <p class="bg-white text-purple-600">
+              <i class="fas fa-city"></i>
+              شارەكان
+            </p>
+            <div class="grid gap-4 grid-cols-5 p-2">
+              <a href="" class="bg-white rounded-lg  text-purple-600">
+                تێست
+              </a>
+
+              <a href="" class="bg-white rounded-lg  text-purple-600">
+                تێست
+              </a>
+
+              <a href="" class="bg-white rounded-lg  text-purple-600">
+                تێست
+              </a>
+
+              <a href="" class="bg-white rounded-lg  text-purple-600">
+                تێست
+              </a>
+
+              <a href="" class="bg-white rounded-lg  text-purple-600">
+                تێست
+              </a>
+
+              <a href="" class="bg-white rounded-lg  text-purple-600">
+                تێست
+              </a>
+
+              <a href="" class="bg-white rounded-lg  text-purple-600">
+                تێست
+              </a>
+
+              <a href="" class="bg-white rounded-lg  text-purple-600">
+                تێست
+              </a>
+
+              <a href="" class="bg-white rounded-lg  text-purple-600">
+                تێست
+              </a>
+
+              <a href="" class="bg-white rounded-lg  text-purple-600">
+                تێست
+              </a>
+
+              <a href="" class="bg-white rounded-lg  text-purple-600">
+                تێست
+              </a>
+
+              <a href="" class="bg-white rounded-lg  text-purple-600">
+                تێست
+              </a>
+
+              <a href="" class="bg-white rounded-lg  text-purple-600">
+                تێست
+              </a>
+
+              
+            </div>
+          </div>
+          <div class="border border-white rounded-lg overflow-hidden pb-1">
+            <p class="bg-white text-purple-600">
+              <i class="fas fa-building"></i>
+              موڵكه‌كان
+            </p>
+            <div class="grid gap-4 grid-cols-3 p-2 text-sm">
+              <a href="" class="bg-white rounded-lg  text-purple-600 p-1">
+                شوقە بۆكرێ
+                <span class="bg-purple-600 text-white px-2 rounded-lg text-xs">123</span>
+
+              </a>
+
+              <a href="" class="bg-white rounded-lg  text-purple-600 p-1">
+                باخ و ڤێلا
+                <span class="bg-purple-600 text-white px-2 rounded-lg text-xs">123</span>
+
+              </a>
+
+              <a href="" class="bg-white rounded-lg  text-purple-600 p-1">
+                شوقە بۆ فرۆشتن
+                <span class="bg-purple-600 text-white px-2 rounded-lg text-xs">123</span>
+
+              </a>
+
+              <a href="" class="bg-white rounded-lg  text-purple-600 p-1">
+                خانوو بۆ كرێ
+                <span class="bg-purple-600 text-white px-2 rounded-lg text-xs">123</span>
+
+              </a>
+
+              <a href="" class="bg-white rounded-lg  text-purple-600 p-1">
+                خانوو بۆ فرۆشتن
+                <span class="bg-purple-600 text-white px-2 rounded-lg text-xs">123</span>
+
+              </a>
+
+              <a href="" class="bg-white rounded-lg  text-purple-600 p-1">
+                دوكان بۆ كرێ
+                <span class="bg-purple-600 text-white px-2 rounded-lg text-xs">123</span>
+
+              </a>
+
+              <a href="" class="bg-white rounded-lg  text-purple-600 p-1">
+                شوێنی بازرگانی بۆ كرێ
+                <span class="bg-purple-600 text-white px-2 rounded-lg text-xs">123</span>
+
+              </a>
+
+              <a href="" class="bg-white rounded-lg  text-purple-600  p-1">
+                شوێنی بازرگانی بۆ فرۆشتن
+                <span class="bg-purple-600 text-white px-2 rounded-lg text-xs">123</span>
+
+              </a>
+
+              <a href="" class="bg-white rounded-lg  text-purple-600 p-1">
+                فرۆشراوەكان
+                <span class="bg-purple-600 text-white px-2 rounded-lg text-xs">123</span>
+
+              </a>
+
+             
+              
+            </div>
+          </div>
+      </div>
+      
+  </div>
+</body>
+</html>
+
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+  
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+  
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+  
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    })
+
+
+
+    var openmodal = document.querySelectorAll('.modal-open')
+    for (var i = 0; i < openmodal.length; i++) {
+      openmodal[i].addEventListener('click', function(event){
+      $('.bigImage').attr("src", $(this).attr('src'));
+    	event.preventDefault()
+    	toggleModal()
+      })
+    }
+    
+    const overlay = document.querySelector('.modal-overlay')
+    overlay.addEventListener('click', toggleModal)
+    
+    var closemodal = document.querySelectorAll('.modal-close')
+    for (var i = 0; i < closemodal.length; i++) {
+      closemodal[i].addEventListener('click', toggleModal)
+    }
+    
+    document.onkeydown = function(evt) {
+      evt = evt || window.event
+      var isEscape = false
+      if ("key" in evt) {
+    	isEscape = (evt.key === "Escape" || evt.key === "Esc")
+      } else {
+    	isEscape = (evt.keyCode === 27)
+      }
+      if (isEscape && document.body.classList.contains('modal-active')) {
+    	toggleModal()
+      }
+    };
+    
+    
+    function toggleModal () {
+      
+      const body = document.querySelector('body')
+      const modal = document.querySelector('.modal')
+      modal.classList.toggle('opacity-0')
+      modal.classList.toggle('pointer-events-none')
+      body.classList.toggle('modal-active')
+    }
+    
+    </script>

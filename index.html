@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>irealtor</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/indexDefault.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+
+</head>
+<body dir="rtl" class="grayColor">
+
+  <!-- header -->
+  
+  <div class="fixed z-50 invisible w-full p-4 bg-purple-500 menuScroll cH50" id="menu" >
+    <button  id="hideMenu"  class="fixed top-0 z-50 px-3 py-1 mt-5 text-white bg-purple-500 rounded-full showMenu focus:outline-none">
+      <i class="fas fa-window-close" style="font-size: 30px;"></i>
+    </button>
+
+    <p class="px-3 mt-16 text-lg text-right text-white">
+      <i class="fas fa-building"></i>
+      موڵكه‌كان
+    </p>
+    <div class="grid grid-cols-2 gap-10 p-2 text-sm border-t border-white md:grid-cols-4">
+      <a href="" class="p-1 text-right text-white border-r-4">
+        شوقە بۆكرێ
+        <span class="px-2 text-xs text-purple-500 bg-white rounded-lg">123</span>
+
+      </a>
+
+      <a href="" class="p-1 text-right text-white border-r-4">
+        باخ و ڤێلا
+        <span class="px-2 text-xs text-purple-500 bg-white rounded-lg">123</span>
+
+      </a>
+
+      <a href="" class="p-1 text-right text-white border-r-4">
+        شوقە بۆ فرۆشتن
+        <span class="px-2 text-xs text-purple-500 bg-white rounded-lg">123</span>
+
+      </a>
+
+      <a href="" class="p-1 text-right text-white border-r-4">
+        خانوو بۆ كرێ
+        <span class="px-2 text-xs text-purple-500 bg-white rounded-lg">123</span>
+
+      </a>
+
+      <a href="" class="p-1 text-right text-white border-r-4">
+        خانوو بۆ فرۆشتن
+        <span class="px-2 text-xs text-purple-500 bg-white rounded-lg">123</span>
+
+      </a>
+
+      <a href="" class="p-1 text-right text-white border-r-4">
+        دوكان بۆ كرێ
+        <span class="px-2 text-xs text-purple-500 bg-white rounded-lg">123</span>
+
+      </a>
+
+      <a href="" class="p-1 text-right text-white border-r-4">
+        شوێنی بازرگانی بۆ كرێ
+        <span class="px-2 text-xs text-purple-500 bg-white rounded-lg">123</span>
+
+      </a>
+
+      <a href="" class="p-1 text-right text-white border-r-4">
+        شوێنی بازرگانی بۆ فرۆشتن
+        <span class="px-2 text-xs text-purple-500 bg-white rounded-lg">123</span>
+
+      </a>
+
+      <a href="" class="p-1 text-right text-white border-r-4">
+        فرۆشراوەكان
+        <span class="px-2 text-xs text-purple-500 bg-white rounded-lg">123</span>
+
+      </a>
+
+     
+      
+    </div>
+
+    </div>
+
+    <button  id="showMenu"  class="fixed bottom-0 z-50 px-3 py-1 mb-5 text-white transition duration-150 transform bg-purple-500 rounded-full focus:outline-none hover:scale-110">
+      <i class="fas fa-bars" style="font-size: 30px;"></i>
+    </button>
+    <div class="p-1 pt-3 bg-purple-500 full ">
+        <div class="flex flex-wrap items-center justify-center mx-auto text-center md:w-10/12">
+        
+            <div class="flex justify-between w-full text-xl text-right md:w-1/3 ">
+              <p class="rounded md:mx-auto">
+                <a href="index.html">
+                 <img src="logo/logo.png" class="w-16" alt="">
+               </a>
+              </p>
+
+            
+
+              <div class="relative md:hidden" x-data="{ isOpen: false}">
+                <button class="px-2 pt-1 ml-2 bg-white rounded focus:outline-none "
+                @click="isOpen = !isOpen" 
+                @keydown.escape="isOpen = false" >
+                  <i class="fas fa-bars"></i>
+                </button>
+
+                <ul x-show="isOpen"
+                    @click.away="isOpen = false"
+                    class="absolute left-0 z-20 w-48 py-1 mt-2 overflow-hidden font-normal bg-white border rounded shadow"
+                >
+                    <li class="mx-4 mb-2">
+                      <a href="register.html" class="text-left ">
+                        دانانی هەژمار <i class="text-xs fas fa-user-plus "></i> 
+                      </a>
+                    </li>
+                    <li class="mb-2 border-b border-gray-400">
+                      <a href="login.html" class="mx-4 mt-5 text-left ">
+                        چوونە ژورەوە <i class="text-xs fas fa-sign-in-alt"></i>
+                      </a>
+                    </li>
+                    <li class="mb-2">
+                      <a href="about.html" class="mx-4 mt-5 text-left ">
+                        دەربارە <i class="text-xs fas fa-info-circle"></i>
+                       </a>
+                    </li>
+                </ul>
+            </div>
+
+            </div>
+
+            
+            <div class="flex-wrap justify-center hidden w-full mx-auto md:flex sm:w-2/3 sm:justify-start" dir="ltr" style="text-align: left;">
+             
+            <a href="register.html" class="mx-4 text-left text-white transition duration-300 transform border-b border-solid border-w-2 hover:-translate-y-2">
+              دانانی هەژمار <i class="text-xs fas fa-user-plus "></i> 
+            </a>
+            <a href="login.html" class="mx-4 text-left text-white transition duration-300 transform border-b border-solid border-w-2 hover:-translate-y-2">
+              چوونە ژورەوە <i class="text-xs fas fa-sign-in-alt"></i>
+            </a>
+            <a href="about.html" class="mx-4 text-left text-white transition duration-300 transform border-b border-solid border-w-2 hover:-translate-y-2">
+             دەربارە <i class="text-xs fas fa-info-circle"></i>
+            </a>
+              <!-- dway login bwn wata drws bwne sessionaka -->
+              <!-- <a href="profile.html" class="mt-4 sm:mt-0">
+                    <img src="https://www.pngarts.com/files/3/Avatar-PNG-Download-Image.png" class="w-12 rounded-full" alt="">
+                </a>
+                -->
+          </div>
+
+          
+        </div>
+    </div>
+    
+    
+
+    <div class="pt-1 text-center bigImage ">
+            <div class="flex items-center justify-center w-full p-5 text-black border-b border-white">
+                <h1 class="text-white hCustom"> بگەڕێ بەدوای <span class="text-purple-600">خانوو</span>ی خەونەكانت  <span class="text-purple-600">:)</span></h1>
+            </div>
+           
+            <div class="w-full">
+
+                <div class="relative inline-block w-10/12 mt-4 md:mx-0 md:w-64">
+                    <select class="block w-full px-4 py-2 pr-8 leading-tight bg-white border border-gray-400 rounded shadow appearance-none hover:border-gray-500 focus:outline-none focus:shadow-outline">
+                      <option>شار دیاری بكە</option>
+                      <option>Option 2</option>
+                      <option>Option 3</option>
+                    </select>
+                    <div class="absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 pointer-events-none">
+                      <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </div>
+                  </div>
+                  <div class="relative inline-block w-10/12 mt-4 md:mx-0 md:w-64">
+                    <select class="block w-full px-4 py-2 pr-8 leading-tight bg-white border border-gray-400 rounded shadow appearance-none hover:border-gray-500 focus:outline-none focus:shadow-outline">
+                      <option>مەتر دیاری بكە</option>
+                      <option>Option 2</option>
+                      <option>Option 3</option>
+                    </select>
+                    <div class="absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 pointer-events-none">
+                      <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </div>
+                  </div>
+                  <div class="relative inline-block w-10/12 mt-4 md:mx-0 md:w-64">
+                    <select class="block w-full px-4 py-2 pr-8 leading-tight bg-white border border-gray-400 rounded shadow appearance-none hover:border-gray-500 focus:outline-none focus:shadow-outline">
+                      <option>ژوور دیاری بكە</option>
+                      <option>Option 2</option>
+                      <option>Option 3</option>
+                    </select>
+                    <div class="absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 pointer-events-none">
+                      <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </div>
+                  </div>
+                  <div class="relative block w-10/12 mx-auto mt-4 md:w-64">
+                    <button class="w-full p-1 mx-auto transition duration-150 transform bg-white rounded hover:scale-110 hover:bg-purple-600 hover:text-white">
+                          <i class="fas fa-search"></i>
+                      </button>
+                  </div>
+            </div>
+           
+    </div>
+
+    <!-- body -->
+
+    <div class="grid gap-5 p-2 px-6 mx-auto text-purple-600 sm:w-12/12 lg:px-0 lg:w-7/12 sm:grid-cols-2 md:grid-cols-3" style="position: relative;top:-100px">
+     
+      <a href="posts.html" class="mx-auto transition duration-150 transform hover:scale-110">
+          <div class="flex flex-wrap items-center justify-center max-w-sm overflow-hidden rounded-lg shadow-lg grayColor ">
+              <div class="w-full">
+                <img src="images/building.jpg" alt="">
+                
+              </div>
+                <div class="px-6 py-4 text-center">
+                  <p class="text-base ">
+                  شوقە بۆكرێ
+                  </p>
+                  <span class="px-2 text-xs text-white bg-purple-600 rounded-lg ">123</span>
+                </div>
+              </div>
+      </a>
+      <a href="posts.html" class="mx-auto transition duration-150 transform hover:scale-110">
+          <div class="flex flex-wrap items-center justify-center max-w-sm overflow-hidden rounded-lg shadow-lg grayColor ">
+              <div class="w-full">
+                <img src="images/forest.jpg" alt="">
+                
+              </div>
+              <div class="px-6 py-4 text-center">
+                <p class="text-base text-center ">
+                   باخ و ڤێلا
+                  </p>
+                  <span class="px-2 text-xs text-white bg-purple-600 rounded-lg ">13</span>
+
+                </div>
+              </div>
+      </a>
+      <a href="posts.html" class="mx-auto transition duration-150 transform hover:scale-110">
+          <div class="flex flex-wrap items-center justify-center max-w-sm overflow-hidden rounded-lg shadow-lg grayColor ">
+              <div class="w-full">
+                <img src="images/shuqaFroshtn.jpg" alt="">
+                
+              </div>
+              <div class="px-6 py-4 text-center">
+                <p class="text-base text-center ">
+                  شوقە بۆ فرۆشتن
+                  </p>
+                  <span class="px-2 text-xs text-white bg-purple-600 rounded-lg ">18</span>
+
+                </div>
+              </div>
+      </a>
+      <a href="" class="mx-auto transition duration-150 transform hover:scale-110">
+          <div class="flex flex-wrap items-center justify-center max-w-sm overflow-hidden rounded-lg shadow-lg grayColor ">
+              <div class="w-full">
+                <img src="images/houseKre.jpg" alt="">
+                
+              </div>
+              <div class="px-6 py-4 text-center">
+                <p class="text-base text-center ">
+                خانوو بۆ كرێ
+                  </p>
+                  <span class="px-2 text-xs text-white bg-purple-600 rounded-lg ">13</span>
+
+                </div>
+              </div>
+      </a>
+    
+      <a href="" class="mx-auto transition duration-150 transform hover:scale-110">
+          <div class="flex flex-wrap items-center justify-center max-w-sm overflow-hidden rounded-lg shadow-lg grayColor ">
+              <div class="w-full">
+                <img src="images/houseFroshtn.jpg" alt="">
+                
+              </div>
+              <div class="px-6 py-4 text-center">
+                <p class="text-base text-center ">
+                خانوو بۆ فرۆشتن
+                  </p>
+                  <span class="px-2 text-xs text-white bg-purple-600 rounded-lg ">23</span>
+
+                </div>
+              </div>
+      </a>
+    
+    
+      <a href="" class="mx-auto transition duration-150 transform hover:scale-110">
+          <div class="flex flex-wrap items-center justify-center max-w-sm overflow-hidden rounded-lg shadow-lg grayColor ">
+              <div class="w-full">
+                <img src="images/dukan.jpg" alt="">
+                
+              </div>
+              <div class="px-6 py-4 text-center">
+                <p class="text-base text-center ">
+                دوكان بۆ كرێ
+                  </p>
+                  <span class="px-2 text-xs text-white bg-purple-600 rounded-lg ">223</span>
+
+                </div>
+              </div>
+      </a>
+    
+      <a href="" class="mx-auto transition duration-150 transform hover:scale-110">
+          <div class="flex flex-wrap items-center justify-center max-w-sm overflow-hidden rounded-lg shadow-lg grayColor ">
+              <div class="w-full">
+                <img src="images/dukank.jpg" alt="">
+                
+              </div>
+              <div class="px-6 py-4 text-center">
+                <p class="text-base text-center ">
+                دوكان بۆ فرۆشتن
+                  </p>
+                  <span class="px-2 text-xs text-white bg-purple-600 rounded-lg ">1</span>
+
+                </div>
+              </div>
+      </a>
+      <a href="" class="mx-auto transition duration-150 transform hover:scale-110">
+          <div class="flex flex-wrap items-center justify-center max-w-sm overflow-hidden rounded-lg shadow-lg grayColor ">
+              <div class="w-full">
+                <img src="images/bussinesskre.jpg" alt="">
+                
+              </div>
+              <div class="px-6 py-4 text-center">
+                <p class="text-base text-center ">
+                شوێنی بازرگانی بۆ كرێ
+                  </p>
+                  <span class="px-2 text-xs text-white bg-purple-600 rounded-lg ">0</span>
+
+                </div>
+              </div>
+      </a>
+      <a href="" class="mx-auto transition duration-150 transform hover:scale-110">
+          <div class="flex flex-wrap items-center justify-center max-w-sm overflow-hidden rounded-lg shadow-lg grayColor ">
+              <div class="w-full">
+                <img src="images/bussiness1.jpg" alt="">
+                
+              </div>
+              <div class="px-6 py-4 text-center">
+                <p class="text-base text-center ">
+                شوێنی بازرگانی بۆ فرۆشتن
+                  </p>
+                  <span class="px-2 text-xs text-white bg-purple-600 rounded-lg ">13</span>
+
+                </div>
+              </div>
+      </a>
+
+      <a href="" class="mx-auto transition duration-150 transform hover:scale-110">
+          <div class="flex flex-wrap items-center justify-center max-w-sm overflow-hidden rounded-lg shadow-lg grayColor ">
+              <div class="w-full">
+                <img src="images/froshraw.jpg" alt="">
+                
+              </div>
+              <div class="px-6 py-4 text-center">
+                <p class="text-base text-center ">
+               فرۆشراوەكان
+                  </p>
+                  <span class="px-2 text-xs text-white bg-purple-600 rounded-lg ">220</span>
+
+                </div>
+              </div>
+      </a>
+    
+        
+    </div>
+
+    <!-- new style of posts bo hamwy ba divawa beba-->
+    <div class="p-2 pt-4 pb-10 mx-auto border-t-2 border-solid sm:w-12/12 lg:w-7/12 ">
+        <span class="px-2 text-white bg-purple-600 rounded">نوێترینەكان</span>
+        <div class="grid gap-5 px-4 pt-5 w-12/12 md:grid-cols-2 md:px-0 lg:grid-cols-3">
+
+          <!-- div post -->
+            <a href="" class="mx-auto transition duration-150 transform hover:scale-110">
+              <div class="relative items-center justify-center max-w-sm overflow-hidden rounded-lg shadow-lg grayColor ">
+                  <div class="w-full">
+                    <img src="posts/68576171_2787425514604993_4241807682618523648_o-2.jpg" alt="" class="imgDiv">
+                    
+                  </div>
+
+                  <div class="absolute top-0 left-0 px-4 pt-1 mt-2 ml-2 text-black bg-white bg-opacity-75 rounded-lg">
+                    <i class="fas fa-dollar-sign "></i>
+                    12322
+                  </div>
+
+                  
+                    <div class="relative pt-4 text-center">
+                      <p class="w-8/12 px-2 mx-auto -mt-8 text-base text-white bg-purple-600 border border-white rounded-lg md:w-6/12">
+                      شوقە بۆكرێ 
+                      </p>
+                    </div>
+                    <div class="pl-2 text-left">
+                      <p class="text-lg font-bold">silverbell</p>
+                      <p class="text-sm text-gray-500">
+                      bura jim whyte  <i class="fas fa-map-marker-alt"></i> 
+                      </p>
+
+                      <div class="grid grid-cols-2 text-xs text-gray-700">
+                        <p>bedrooms: 2 <i class="fas fa-bed"></i></p>
+                        <p>sqfit: 720 <i class="fas fa-sort-numeric-up-alt"></i></p>
+                        <p>garage: 1 <i class="fas fa-warehouse"></i></p>
+                        <p>bathrooms: 2 <i class="fas fa-shower"></i> </p>
+                      </div>
+                    </div>
+                    <div class="flex justify-between w-full p-2 mt-3 border-t border-gray-500">
+                      <div class="flex items-center text-xs text-gray-500">
+                        4 years, 8 month <i class="mr-1 fas fa-clock"></i> 
+                      </div>
+                      <div class="flex items-center text-sm">
+                          <p class="ml-2"> test user</p>
+                          <img src="images/2440.jpg" class="w-10 h-10 rounded-full" alt="">
+                      </div>
+                    
+                    </div>
+                  
+                  </div>
+              </a>
+            
+            <a href="" class="mx-auto transition duration-150 transform hover:scale-110">
+              <div class="relative items-center justify-center max-w-sm overflow-hidden rounded-lg shadow-lg grayColor ">
+                  <div class="w-full">
+                    <img src="posts/68576171_2787425514604993_4241807682618523648_o-2.jpg" alt="" class="imgDiv">
+                    
+                  </div>
+
+                  <div class="absolute top-0 left-0 px-4 pt-1 mt-2 ml-2 text-black bg-white bg-opacity-75 rounded-lg">
+                    <i class="fas fa-dollar-sign "></i>
+                    12322
+                  </div>
+
+                  
+                    <div class="relative pt-4 text-center">
+                      <p class="w-8/12 px-2 mx-auto -mt-8 text-base text-white bg-purple-600 border border-white rounded-lg md:w-6/12">
+                      شوقە بۆكرێ 
+                      </p>
+                    </div>
+                    <div class="pl-2 text-left">
+                      <p class="text-lg font-bold">silverbell</p>
+                      <p class="text-sm text-gray-500">
+                      bura jim whyte  <i class="fas fa-map-marker-alt"></i> 
+                      </p>
+
+                      <div class="grid grid-cols-2 text-xs text-gray-700">
+                        <p>bedrooms: 2 <i class="fas fa-bed"></i></p>
+                        <p>sqfit: 720 <i class="fas fa-sort-numeric-up-alt"></i></p>
+                        <p>garage: 1 <i class="fas fa-warehouse"></i></p>
+                        <p>bathrooms: 2 <i class="fas fa-shower"></i> </p>
+                      </div>
+                    </div>
+                    <div class="flex justify-between w-full p-2 mt-3 border-t border-gray-500">
+                      <div class="flex items-center text-xs text-gray-500">
+                        4 years, 8 month <i class="mr-1 fas fa-clock"></i> 
+                      </div>
+                      <div class="flex items-center text-sm">
+                          <p class="ml-2"> test user</p>
+                          <img src="images/2440.jpg" class="w-10 h-10 rounded-full" alt="">
+                      </div>
+                    
+                    </div>
+                  
+                  </div>
+              </a>
+            
+            <a href="" class="mx-auto transition duration-150 transform hover:scale-110">
+              <div class="relative items-center justify-center max-w-sm overflow-hidden rounded-lg shadow-lg grayColor ">
+                  <div class="w-full">
+                    <img src="posts/68576171_2787425514604993_4241807682618523648_o-2.jpg" alt="" class="imgDiv">
+                    
+                  </div>
+
+                  <div class="absolute top-0 left-0 px-4 pt-1 mt-2 ml-2 text-black bg-white bg-opacity-75 rounded-lg">
+                    <i class="fas fa-dollar-sign "></i>
+                    12322
+                  </div>
+
+                  
+                    <div class="relative pt-4 text-center">
+                      <p class="w-8/12 px-2 mx-auto -mt-8 text-base text-white bg-purple-600 border border-white rounded-lg md:w-6/12">
+                      شوقە بۆكرێ 
+                      </p>
+                    </div>
+                    <div class="pl-2 text-left">
+                      <p class="text-lg font-bold">silverbell</p>
+                      <p class="text-sm text-gray-500">
+                      bura jim whyte  <i class="fas fa-map-marker-alt"></i> 
+                      </p>
+
+                      <div class="grid grid-cols-2 text-xs text-gray-700">
+                        <p>bedrooms: 2 <i class="fas fa-bed"></i></p>
+                        <p>sqfit: 720 <i class="fas fa-sort-numeric-up-alt"></i></p>
+                        <p>garage: 1 <i class="fas fa-warehouse"></i></p>
+                        <p>bathrooms: 2 <i class="fas fa-shower"></i> </p>
+                      </div>
+                    </div>
+                    <div class="flex justify-between w-full p-2 mt-3 border-t border-gray-500">
+                      <div class="flex items-center text-xs text-gray-500">
+                        4 years, 8 month <i class="mr-1 fas fa-clock"></i> 
+                      </div>
+                      <div class="flex items-center text-sm">
+                          <p class="ml-2"> test user</p>
+                          <img src="images/2440.jpg" class="w-10 h-10 rounded-full" alt="">
+                      </div>
+                    
+                    </div>
+                  
+                  </div>
+              </a>
+            
+            <a href="" class="mx-auto transition duration-150 transform hover:scale-110">
+              <div class="relative items-center justify-center max-w-sm overflow-hidden rounded-lg shadow-lg grayColor ">
+                  <div class="w-full">
+                    <img src="posts/68576171_2787425514604993_4241807682618523648_o-2.jpg" alt="" class="imgDiv">
+                    
+                  </div>
+
+                  <div class="absolute top-0 left-0 px-4 pt-1 mt-2 ml-2 text-black bg-white bg-opacity-75 rounded-lg">
+                    <i class="fas fa-dollar-sign "></i>
+                    12322
+                  </div>
+
+                  
+                    <div class="relative pt-4 text-center">
+                      <p class="w-8/12 px-2 mx-auto -mt-8 text-base text-white bg-purple-600 border border-white rounded-lg md:w-6/12">
+                      شوقە بۆكرێ 
+                      </p>
+                    </div>
+                    <div class="pl-2 text-left">
+                      <p class="text-lg font-bold">silverbell</p>
+                      <p class="text-sm text-gray-500">
+                      bura jim whyte  <i class="fas fa-map-marker-alt"></i> 
+                      </p>
+
+                      <div class="grid grid-cols-2 text-xs text-gray-700">
+                        <p>bedrooms: 2 <i class="fas fa-bed"></i></p>
+                        <p>sqfit: 720 <i class="fas fa-sort-numeric-up-alt"></i></p>
+                        <p>garage: 1 <i class="fas fa-warehouse"></i></p>
+                        <p>bathrooms: 2 <i class="fas fa-shower"></i> </p>
+                      </div>
+                    </div>
+                    <div class="flex justify-between w-full p-2 mt-3 border-t border-gray-500">
+                      <div class="flex items-center text-xs text-gray-500">
+                        4 years, 8 month <i class="mr-1 fas fa-clock"></i> 
+                      </div>
+                      <div class="flex items-center text-sm">
+                          <p class="ml-2"> test user</p>
+                          <img src="images/2440.jpg" class="w-10 h-10 rounded-full" alt="">
+                      </div>
+                    
+                    </div>
+                  
+                  </div>
+              </a>
+            
+        
+
+          
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="w-full p-2 pt-5 text-center bg-purple-500">
+
+        <img src="logo/logo.png" class="w-24 mx-auto " alt="">
+             <p class="mt-4 text-white">
+              یه‌كه‌مین ماڵپه‌ڕی كوردی بۆ فرۆشتن و به‌كرێدانی موڵكه‌كانتان
+            </p>
+
+        
+     
+        <div class="grid w-full grid-cols-1 gap-10 pt-2 mt-4">
+            <div class="pb-1 overflow-hidden rounded-lg">
+              <p class="px-3 text-lg text-right text-white">
+                <i class="fas fa-city"></i>
+                شارەكان
+              </p>
+              <div class="grid grid-cols-2 gap-5 p-2 text-right border-t border-white sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-10">
+                <a href="" class="px-1 text-sm text-right text-white border-r-4">
+                  تێست
+                </a>    
+                
+                <a href="" class="px-1 text-sm text-right text-white border-r-4">
+                  تێست
+                </a>    
+                
+                <a href="" class="px-1 text-sm text-right text-white border-r-4">
+                  تێست
+                </a>    
+                
+                <a href="" class="px-1 text-sm text-right text-white border-r-4">
+                  تێست
+                </a>    
+                
+                <a href="" class="px-1 text-sm text-right text-white border-r-4">
+                  تێست
+                </a>    
+                
+                <a href="" class="px-1 text-sm text-right text-white border-r-4">
+                  تێست
+                </a>    
+                
+                <a href="" class="px-1 text-sm text-right text-white border-r-4">
+                  تێست
+                </a>    
+                
+                <a href="" class="px-1 text-sm text-right text-white border-r-4">
+                  تێست
+                </a>    
+                
+                <a href="" class="px-1 text-sm text-right text-white border-r-4">
+                  تێست
+                </a>    
+                
+                <a href="" class="px-1 text-sm text-right text-white border-r-4">
+                  تێست
+                </a>    
+                
+                <a href="" class="px-1 text-sm text-right text-white border-r-4">
+                  تێست
+                </a>    
+                
+                <a href="" class="px-1 text-sm text-right text-white border-r-4">
+                  تێست
+                </a>    
+                
+                
+               
+              </div>
+            </div>
+            <div class="pb-1 overflow-hidden rounded-lg">
+              <p class="px-3 text-lg text-right text-white">
+                <i class="fas fa-building"></i>
+                موڵكه‌كان
+              </p>
+              <div class="grid grid-cols-2 gap-4 p-2 text-sm border-t border-white sm:grid-cols-3 md:grid-cols-4">
+                <a href="" class="p-1 text-right text-white border-r-4">
+                  شوقە بۆكرێ
+                  <span class="px-2 text-xs text-purple-500 bg-white rounded-lg">123</span>
+
+                </a>
+
+                <a href="" class="p-1 text-right text-white border-r-4">
+                  باخ و ڤێلا
+                  <span class="px-2 text-xs text-purple-500 bg-white rounded-lg">123</span>
+
+                </a>
+
+                <a href="" class="p-1 text-right text-white border-r-4">
+                  شوقە بۆ فرۆشتن
+                  <span class="px-2 text-xs text-purple-500 bg-white rounded-lg">123</span>
+
+                </a>
+
+                <a href="" class="p-1 text-right text-white border-r-4">
+                  خانوو بۆ كرێ
+                  <span class="px-2 text-xs text-purple-500 bg-white rounded-lg">123</span>
+
+                </a>
+
+                <a href="" class="p-1 text-right text-white border-r-4">
+                  خانوو بۆ فرۆشتن
+                  <span class="px-2 text-xs text-purple-500 bg-white rounded-lg">123</span>
+
+                </a>
+
+                <a href="" class="p-1 text-right text-white border-r-4">
+                  دوكان بۆ كرێ
+                  <span class="px-2 text-xs text-purple-500 bg-white rounded-lg">123</span>
+
+                </a>
+
+                <a href="" class="p-1 text-right text-white border-r-4">
+                  شوێنی بازرگانی بۆ كرێ
+                  <span class="px-2 text-xs text-purple-500 bg-white rounded-lg">123</span>
+
+                </a>
+
+                <a href="" class="p-1 text-right text-white border-r-4">
+                  شوێنی بازرگانی بۆ فرۆشتن
+                  <span class="px-2 text-xs text-purple-500 bg-white rounded-lg">123</span>
+
+                </a>
+
+                <a href="" class="p-1 text-right text-white border-r-4">
+                  فرۆشراوەكان
+                  <span class="px-2 text-xs text-purple-500 bg-white rounded-lg">123</span>
+
+                </a>
+
+               
+                
+              </div>
+            </div>
+           
+        </div>
+         
+    </div>
+    <div class="grid justify-center grid-cols-2 p-2 text-xs text-center md:flex bgGray" dir="ltr" style="font-size: 30px;">
+        <a href="" class="m-2 transition duration-150 transform hover:scale-110">
+          <i class="text-blue-500 fab fa-facebook"></i> 
+          <p class="text-xs">لەفەیسبووك لەگەڵمان بە</p> 
+        </a>
+        <a href=""class="m-2 transition duration-150 transform hover:scale-110">
+          <i class="text-purple-500 fab fa-viber"></i>
+          <p class="text-xs">0770 123 1212</p>
+        </a>
+        <a href=""class="m-2 transition duration-150 transform hover:scale-110">
+          <i class="text-red-500 fas fa-envelope-square"></i>
+          <p class="text-xs">irealtor@gmail.com</p>
+        </a> 
+        <a href=""class="m-2 transition duration-150 transform hover:scale-110">
+          <i class="text-green-500 fab fa-android"></i>
+          <p class="text-xs">ئەپ بۆ ئەندرۆید</p>
+        </a>
+        <a href=""class="m-2 transition duration-150 transform hover:scale-110">
+          <i class="text-blue-500 fab fa-app-store-ios"></i>
+          <p class="text-xs">ئەپ بۆ ئایفۆن</p>
+        </a>
+        <a href="about.html"class="m-2 transition duration-150 transform hover:scale-110">
+          <i class="text-blue-500 fas fa-info-circle"></i>
+          <p class="text-xs">دەربارە</p>
+        </a>
+      </div>
+</body>
+</html>
+
+<script>
+
+
+var w = window.innerWidth;
+if(w<780){
+    document.getElementById("menu").classList.remove("cH50")
+    document.getElementById("menu").classList.add("cH75")
+}
+const button = document.querySelector("#showMenu");
+const button2 = document.querySelector("#hideMenu");
+const menu = document.querySelector(".menuScroll");
+
+button.addEventListener("click", ()=>{
+  menu.classList.toggle("invisible");
+  button.classList.toggle("invisible");
+});
+
+button2.addEventListener("click",()=>{
+  menu.classList.toggle("invisible");
+  button.classList.toggle("invisible");
+})
+
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("showMenu").style.visibility = "visible";
+  } else {
+    document.getElementById("showMenu").style.visibility = "hide";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
